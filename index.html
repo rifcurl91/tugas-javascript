@@ -6,6 +6,7 @@
     <title>Tugas Javascript</title>
 
     <style>
+      /*font-family*/
       @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Noto+Sans+JP:wght@100&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caprasimo&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Akatab:wght@900&family=Bagel+Fat+One&family=Caprasimo&display=swap");
@@ -13,6 +14,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Akatab:wght@900&family=Bagel+Fat+One&family=Caprasimo&family=Pacifico&family=Staatliches&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Akatab:wght@900&family=Bagel+Fat+One&family=Caprasimo&family=Pacifico&family=Press+Start+2P&family=Staatliches&display=swap");
 
+      /*CSS*/
       body {
         background-image: url(top-view-notebooks-calculator.jpg);
         background-position: center;
@@ -36,19 +38,17 @@
         border: 3px solid yellowgreen;
         color: blue;
         border-radius: 5px;
+        font-family: "Press Start 2P", cursive;
       }
 
       table {
         margin-left: 11px;
       }
-
-      .button {
-        font-family: "Press Start 2P", cursive;
-      }
     </style>
   </head>
   <body>
-    <div class="container">
+    <!--html-->
+    <div>
       <h1>Tugas <span class="satu">Javascript</span></h1>
       <h2>Kalkulator <span class="dua">Sederhana</span></h2>
       <br />
@@ -159,20 +159,23 @@
     </div>
 
     <script>
+      // Insert angka ke textview
       function insert(num) {
         document.form.textarea.value = document.form.textarea.value + num;
       }
 
+      // Fungsi Hitung
       function equal() {
-        var hasil = document.form.textarea.value;
+        let hasil = document.form.textarea.value;
         document.form.textarea.value = eval(hasil);
       }
-
+      // Clean
       function clean() {
         document.form.textarea.value = "";
       }
+      // Delete
       function back() {
-        var hasil = document.form.textarea.value;
+        let hasil = document.form.textarea.value;
         document.form.textarea.value = hasil.substring(0, hasil.length - 1);
       }
     </script>
